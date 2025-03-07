@@ -1,0 +1,63 @@
+id: default
+groups: {}
+comments:
+  - id: 30aobC
+    comment: Split events by category; disable routes to control which events are
+      forwarded as needed.
+    index: 0
+routes:
+  - id: f0VkfI
+    name: push_security_activity_events
+    final: true
+    disabled: false
+    pipeline: push_security_webhook_events
+    description: Activity events from Push Security
+    clones: []
+    enableOutputExpression: false
+    outputExpression: null
+    filter: JSON.parse(_raw)['category'] == 'ACTIVITY'
+    output: default
+  - id: ACo5Ff
+    name: push_security_entity_events
+    final: true
+    disabled: false
+    pipeline: push_security_webhook_events
+    description: Entity events from Push Security
+    clones: []
+    enableOutputExpression: false
+    outputExpression: null
+    filter: JSON.parse(_raw)['category'] == 'ENTITY'
+    output: default
+  - id: OqzvGh
+    name: push_security_control_events
+    final: true
+    disabled: false
+    pipeline: push_security_webhook_events
+    description: Control events from Push Security
+    clones: []
+    enableOutputExpression: false
+    outputExpression: null
+    filter: JSON.parse(_raw)['category'] == 'CONTROL'
+    output: default
+  - id: CsCkTA
+    name: push_security_audit_events
+    final: true
+    disabled: false
+    pipeline: push_security_webhook_events
+    description: Audit events from Push Security
+    clones: []
+    enableOutputExpression: false
+    outputExpression: null
+    filter: JSON.parse(_raw)['category'] == 'AUDIT'
+    output: default
+  - id: default
+    name: default
+    final: true
+    disabled: false
+    pipeline: main
+    description: ""
+    clones: []
+    enableOutputExpression: false
+    outputExpression: null
+    filter: "true"
+    output: default

@@ -1,0 +1,33 @@
+D38lnG:
+  sampleName: Activity_Login
+  description: Sample login event
+  created: 1738771950172
+  size: 3215
+  numEvents: 1
+eDl9Pc:
+  sampleName: Login observed on new platform with weak password
+  created: 1738778262297
+  size: 8083
+  numEvents: 3
+  description: Collection of sample events for a login to a new platform with a
+    weak password
+gNA1JJ:
+  sampleName: "Entity: New browser"
+  description: Sample event for when a new browser is observed
+  created: 1738779159533
+  size: 2247
+  numEvents: 1
+di0WMW:
+  sampleName: "Control: Blocked URL"
+  description: Sample event for the Blocked URL control
+  created: 1738852466275
+  isPackOnly: true
+  size: 2659
+  numEvents: 1
+PmeDNI:
+  sampleName: "Audit: API key added"
+  description: Sample event for an admin adding an API key the Push Security platform
+  created: 1738852602650
+  isPackOnly: true
+  size: 2061
+  numEvents: 1

@@ -1,0 +1,43 @@
+output: default
+streamtags: []
+groups: {}
+asyncFuncTimeout: 1000
+functions:
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: Process events from Push Security
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: Drop fields with null values
+  - id: serde
+    filter: "true"
+    disabled: false
+    conf:
+      mode: extract
+      type: json
+      srcField: _raw
+      dstField: _raw
+      fieldFilterExpr: value!==null
+      remove: []
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: Drop unused metadata fields
+  - id: eval
+    filter: "true"
+    disabled: false
+    conf:
+      remove:
+        - headers
+        - clientip
+        - host
+        - method
+        - path
+        - source
+      add: []
+description: Parse events from Push Security

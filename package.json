@@ -1,0 +1,1 @@
+{"name":"cc-push-security","version":"1.0.0","author":"Push Security","description":"This pack is for receiving, filtering, and parsing of events from Push Security","displayName":"Push Security","tags":{"streamtags":["PushSecurity","Push","IdentitySecurity"],"dataType":["logs"],"useCase":["routing","filtering","aggregation"]}}
